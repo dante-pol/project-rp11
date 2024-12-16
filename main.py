@@ -1,11 +1,10 @@
 import math
+import functions
 
 a = int(input("input a >>"))
 b = int(input("input b >>"))
 c = int(input("input c >>"))
 
-p = (a + b + c) / 2
+area = functions.calculate_area(a, b, c)
 
-s = math.sqrt(p * (p - a) * (p - b) * (p - c))
-
-print(f"s={s}")
+print(f"area= {area}")
