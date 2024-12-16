@@ -6,9 +6,20 @@ is_program_exit = False
 
 while not is_program_exit:
 
-    a = int(input("input a >>"))
-    b = int(input("input b >>"))
-    c = int(input("input c >>"))
+    a_text = input("input a >>")
+    b_text = input("input b >>")
+    c_text = input("input c >>")
+
+    while not functions.validate_text(a_text, b_text, c_text):
+        print("system >> Error! Value error not validated!")
+
+        a_text = input("input a >>")
+        b_text = input("input b >>")
+        c_text = input("input c >>")
+
+    a = float(a_text)
+    b = float(b_text)
+    c = float(c_text)
 
     area = functions.calculate_area(a, b, c)
 
@@ -18,3 +29,5 @@ while not is_program_exit:
 
     if user_input == "N":
         is_program_exit = True
+
+print("Bye!")
